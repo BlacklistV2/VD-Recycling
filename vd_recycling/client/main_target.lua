@@ -29,7 +29,7 @@ exports.ox_target:addSphereZone({
 })
 
 exports.ox_target:addSphereZone({
-	coords = Config.Enter,
+	coords = vec3(992.3944, -3097.8555, -38.9959),
 	radius = 1,
     debug = Config.Debug,
 	options = {
@@ -46,7 +46,7 @@ exports.ox_target:addSphereZone({
 })
 
 exports.ox_target:addSphereZone({
-	coords = Config.Exit,
+	coords = Config.Enter,
 	radius = 1,
     debug = Config.Debug,
 	options = {
@@ -65,13 +65,13 @@ exports.ox_target:addSphereZone({
 function teleInside()
     DoScreenFadeOut(500)
     while not IsScreenFadedOut() do	Citizen.Wait(10) end
-    SetEntityCoords(PlayerPedId(), Config.Enter)
+    SetEntityCoords(PlayerPedId(), vec3(992.3944, -3097.8555, -38.9959))
     DoScreenFadeIn(500)
 end
 
 function teleOut()
     DoScreenFadeOut(500)
     while not IsScreenFadedOut() do	Citizen.Wait(10) end
-    SetEntityCoords(PlayerPedId(), Config.Exit)
+    SetEntityCoords(PlayerPedId(), Config.Enter)
     DoScreenFadeIn(500)
 end

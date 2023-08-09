@@ -261,7 +261,7 @@ local poly = lib.zones.poly({
         vec(1028.1239, -3089.1282, -38),
     },
     thickness = 10,
-    debug = true,
+    debug = Config.DebugPoly,
     onEnter = onEnter,
     onExit = onExit,
 })
